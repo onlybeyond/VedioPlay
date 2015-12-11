@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#000"
+
+        xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+                android:background="#000"
+
+                android:layout_width="match_parent"
+              android:layout_height="match_parent">
+             <SurfaceView
+                     android:id="@+id/sv_video"
+                     android:layout_centerInParent="true"
+                     android:layout_width="match_parent"
+                     android:visibility="visible"
+                     android:layout_height="match_parent"/>
+    <com.onlybeyond.MediaPlayer.widget.LoadingView
+            android:id="@+id/loading"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            />
+
+</RelativeLayout>
+    <LinearLayout
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:id="@+id/surfaceview_ll"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" >
+
+        <CheckBox
+                android:id="@+id/cb_before"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/surface_selector3"  />
+
+        <CheckBox
+                android:id="@+id/cb_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+
+                android:button="@drawable/surface_selector2" />
+
+        <CheckBox
+                android:id="@+id/cb_after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:button="@drawable/surface_selector" />
+
+
+    </LinearLayout>
+        <LinearLayout
+                android:id="@+id/ll_play_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+            <TextView
+                    android:id="@+id/tv_play_time"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="#ff6100"
+                    android:text="00:00:00"
+                    android:textColor="#fff" />
+
+            <SeekBar
+                    android:id="@+id/sb_play_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:progress="0"
+                    android:thumb="@mipmap/seek_bar_indicator" />
+
+            <TextView
+                    android:id="@+id/tv_long"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="#ff6100"
+                    android:text="00:00:00"
+                    android:textColor="#fff" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
